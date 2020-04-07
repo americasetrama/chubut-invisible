@@ -3,7 +3,7 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Chubut Invisible`,
-    description: `Repositorio de las noticias que dan cuentan de los abusos que existieron y todavia existen en la provincia gobernada por Arcioni.`,
+    description: `Recopilacion de los abusos existen en la provincia de Chubut`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -28,7 +28,7 @@ module.exports = {
             baseId: `appnZOhuQPd6jqT3m`,
             tableName: `noticias`,
           },
-          
+
           // We can add other bases/tables here, too!
           //{
           //baseId: `AIRTABLE_BASE_ID`,

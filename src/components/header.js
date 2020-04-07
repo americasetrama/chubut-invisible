@@ -6,28 +6,12 @@ import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
 const Header = ({ siteTitle }) => (
   <Headroom>
-  <header
-  className="bg-teal-500 mb-6"
-    
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 font-sans font-bold">
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <Link to="/" className="mr-12 text-2xl">
           {siteTitle}
         </Link>
-      </h1>
+      </div>
 
       <ThemeToggler>
         {({ theme, toggleTheme }) => (
@@ -41,8 +25,7 @@ const Header = ({ siteTitle }) => (
           </label>
         )}
       </ThemeToggler>
-    </div>
-  </header>
+    </nav>
   </Headroom>
 )
 

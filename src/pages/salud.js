@@ -4,10 +4,13 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => {
+const SaludPage = () => {
   const data = useStaticQuery(graphql`
-    query HomeQuery {
-      allAirtable(sort: { fields: data___date, order: DESC }) {
+    query SaludQuery {
+      allAirtable(
+        sort: { fields: data___date, order: DESC }
+        filter: { data: { category: { eq: "salud" } } }
+      ) {
         nodes {
           data {
             title
@@ -25,13 +28,13 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Inicio" />
-
+      <SEO title="Salud" />
+      <h1 className="py-6 border-b border-gray-400">Salud</h1>
       <div className="max-w-full m-auto mb-6">
         <div className="flex flex-wrap justify-center ">
           {data.allAirtable.nodes.map((item, i) => (
             <div className="flex w-full">
-              <div className="flex flex-col justify-between py-4 leading-normal rounded-b  lg:rounded-b-none lg:rounded-r">
+              <div className="flex flex-col justify-between py-4 leading-normal rounded-b lg:rounded-b-none lg:rounded-r">
                 <div className="mb-1">
                   <p className="flex items-center m-0 text-sm text-gray-600">
                     <svg
@@ -66,4 +69,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default SaludPage

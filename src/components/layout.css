@@ -4,6 +4,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
+  @apply bg-gray-100;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -621,15 +622,19 @@ pre tt:after {
   }
 }
 
-
-
 .switch {
   position: fixed;
   display: inline-block;
   width: 60px;
   height: 34px;
-  right: 16px;
-  top: 16px;
+  right: 66px;
+  top: 23px;
+}
+
+@screen lg {
+  .switch {
+    right: 15px;
+  }
 }
 
 .switch input {
@@ -678,10 +683,14 @@ input:checked + .slider:before {
 body.dark {
   background: #333;
 }
+
 body.dark a {
-	color: #fff
+  color: #fff;
 }
 
+body.dark h1 {
+  color: #fff;
+}
 
 body.dark {
   @apply bg-gray-800;
@@ -704,7 +713,7 @@ body.dark header {
 }
 
 body.dark .text-gray-600 {
-	@apply text-gray-100
+  @apply text-gray-100;
 }
 
 body.dark footer {
@@ -715,8 +724,8 @@ body.dark footer a {
   @apply text-gray-100;
 }
 
-body.dark nav a {
-  @apply text-gray-100;
+body.dark .app-nav a {
+  @apply text-gray-900;
 }
 
 body.dark nav a.active {
