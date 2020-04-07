@@ -3,7 +3,7 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Chubut Invisible`,
-    description: `Recopilacion de los abusos existen en la provincia de Chubut`,
+    description: `Recopilacion de los abusos que hoy existen en la provincia de Chubut`,
     author: `@gatsbyjs`,
   },
   plugins: [
