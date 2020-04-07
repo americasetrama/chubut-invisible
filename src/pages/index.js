@@ -60,7 +60,7 @@ const IndexPage = () => {
                   <div className="p-0 mb-2 ">
                     <Link
                       to={`/${kebabCase(item.data.category)}/`}
-                      className="inline-block px-3 py-1 mr-2 text-sm font-semibold text-gray-100 bg-gray-500 rounded-full hover:bg-gray-600"
+                      className="inline-block px-3 py-1 mr-2 font-mono text-sm font-semibold text-gray-100 bg-teal-700 rounded-full hover:bg-gray-600"
                     >
                       {item.data.category}
                     </Link>
