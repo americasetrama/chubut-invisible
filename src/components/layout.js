@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Sidebar from "../components/Sidebar"
+import Sidebar from "../components/sidebar"
 import Navigation from "../components/navigation"
 
 import Header from "./header"
