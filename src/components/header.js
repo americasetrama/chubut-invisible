@@ -15,9 +15,14 @@ const Header = ({ siteTitle }) => (
 
       <ThemeToggler>
         {({ theme, toggleTheme }) => (
-          <label className="switch top-right" for="theme-toggle">
+          <label
+            className="switch top-right"
+            for="theme-toggle"
+            aria-hidden="true"
+          >
             <input
               type="checkbox"
+              aria-labelledby="theme-toggle"
               id="theme-toggle"
               onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
               checked={theme === "dark"}
