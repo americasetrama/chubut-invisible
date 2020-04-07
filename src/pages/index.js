@@ -34,7 +34,7 @@ const IndexPage = () => {
       <SEO title="Inicio" />
       <h1 className="flex items-baseline justify-between py-6 text-3xl border-b border-gray-400">
         Todas{" "}
-        <span className="text-sm opacity-50">
+        <span className="text-sm ">
           {data.allAirtable.totalCount} publicaciones
         </span>
       </h1>
@@ -44,12 +44,10 @@ const IndexPage = () => {
             <div className="flex w-full py-3 shadow-sm">
               <div className="flex flex-col justify-between pt-1 leading-normal rounded-b lg:rounded-b-none lg:rounded-r">
                 <div className="mb-1">
-                  <p className="flex items-center mb-2 text-sm text-gray-600">
+                  <p className="flex items-center mb-2 text-sm text-gray-900 date">
                     <TiCalendarOutline className="w-4 h-4 mr-2 fill-current" />
                     {item.data.date} -{" "}
-                    <i className="pl-1 opacity-75">
-                      publicación de {item.data.source}
-                    </i>
+                    <i className="pl-1 ">via {item.data.source}</i>
                   </p>
                   <a
                     href={item.data.link}

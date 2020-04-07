@@ -658,7 +658,7 @@ pre tt:after {
   bottom: 0;
   width: 54px;
   border-radius: 5px;
-  @apply bg-teal-700;
+  @apply bg-teal-400;
 }
 
 body.dark .slider {
@@ -692,6 +692,10 @@ body.dark {
 }
 
 body.dark a {
+  color: #fff;
+}
+
+body.dark .date {
   color: #fff;
 }
 
