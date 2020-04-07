@@ -1,13 +1,18 @@
 import React from "react"
-//import { Link } from "gatsby"
+import { Link } from "gatsby"
+import { kebabCase } from "lodash"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { TiCalendarOutline } from "react-icons/ti"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query HomeQuery {
-      allAirtable(sort: { fields: data___date, order: DESC }) {
+      allAirtable(
+        sort: { fields: data___date, order: DESC }
+        filter: { data: { published: { eq: true } } }
+      ) {
         nodes {
           data {
             title
@@ -19,6 +24,7 @@ const IndexPage = () => {
           recordId
           table
         }
+        totalCount
       }
     }
   `)
@@ -26,22 +32,24 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Inicio" />
-
+      <h1 className="flex items-baseline justify-between py-6 text-3xl border-b border-gray-400">
+        Todas{" "}
+        <span className="text-sm opacity-50">
+          {data.allAirtable.totalCount} publicaciones
+        </span>
+      </h1>
       <div className="max-w-full m-auto mb-6">
         <div className="flex flex-wrap justify-center ">
           {data.allAirtable.nodes.map((item, i) => (
-            <div className="flex w-full">
-              <div className="flex flex-col justify-between py-4 leading-normal rounded-b  lg:rounded-b-none lg:rounded-r">
+            <div className="flex w-full py-3 shadow-sm">
+              <div className="flex flex-col justify-between pt-1 leading-normal rounded-b lg:rounded-b-none lg:rounded-r">
                 <div className="mb-1">
-                  <p className="flex items-center m-0 text-sm text-gray-600">
-                    <svg
-                      className="w-3 h-3 mr-2 text-gray-500 fill-current"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-                    </svg>
-                    {item.data.date}
+                  <p className="flex items-center mb-2 text-sm text-gray-600">
+                    <TiCalendarOutline className="w-4 h-4 mr-2 fill-current" />
+                    {item.data.date} -{" "}
+                    <i className="pl-1 opacity-75">
+                      publicación de {item.data.source}
+                    </i>
                   </p>
                   <a
                     href={item.data.link}
@@ -51,10 +59,13 @@ const IndexPage = () => {
                   >
                     {item.data.title}
                   </a>
-                  <div className="p-0 ">
-                    <span className="inline-block px-3 py-1 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">
-                      #{item.data.category}
-                    </span>
+                  <div className="p-0 mb-2 ">
+                    <Link
+                      to={`/${kebabCase(item.data.category)}/`}
+                      className="inline-block px-3 py-1 mr-2 text-sm font-semibold text-gray-100 bg-gray-500 rounded-full hover:bg-gray-600"
+                    >
+                      {item.data.category}
+                    </Link>
                   </div>
                 </div>
               </div>

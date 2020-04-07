@@ -8,7 +8,7 @@ const Header = ({ siteTitle }) => (
   <Headroom>
     <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 font-sans font-bold">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <Link to="/" className="mr-12 text-2xl">
+        <Link to="/" className="mr-12 font-mono text-2xl">
           {siteTitle}
         </Link>
       </div>

@@ -37,7 +37,7 @@ const Navigation = ({ closeMenu }) => (
           onClick={closeMenu}
           activeClassName="font-bold"
           to={route.slug}
-          className="px-2 m-2"
+          className="px-2 m-2 text-sm"
         >
           {route.title}
         </Link>
