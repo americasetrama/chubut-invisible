@@ -29,7 +29,7 @@ const SaludPage = () => {
 
   return (
     <Layout>
-      <SEO title="Educación" />
+      <SEO title="Salud" />
       <h1 className="flex items-baseline justify-between py-6 text-3xl border-b border-gray-400">
         Salud{" "}
         <span className="text-sm ">
