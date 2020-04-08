@@ -35,9 +35,9 @@ const ViolenciaInstitucionalPage = () => {
   return (
     <Layout>
       <SEO title="Violencia institucional" />
-      <h1 className="flex items-baseline justify-between py-6 text-3xl border-b border-gray-400">
+      <h1 className="flex flex-col items-baseline justify-between py-6 text-3xl border-b border-gray-400 sm:flex-row">
         Violencia institucional{" "}
-        <span className="text-sm ">
+        <span className="mt-2 text-sm">
           {data.allAirtable.totalCount} denuncias
         </span>
       </h1>

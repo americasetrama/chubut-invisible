@@ -32,9 +32,11 @@ const MegamineriaPage = () => {
   return (
     <Layout>
       <SEO title="Megaminería" />
-      <h1 className="flex items-baseline justify-between py-6 text-3xl border-b border-gray-400">
+      <h1 className="flex flex-col items-baseline justify-between py-6 text-3xl border-b border-gray-400 sm:flex-row">
         Megaminería{" "}
-        <span className="text-sm">{data.allAirtable.totalCount} denuncias</span>
+        <span className="mt-2 text-sm">
+          {data.allAirtable.totalCount} denuncias
+        </span>
       </h1>
       <div className="max-w-full m-auto mb-6">
         <div className="flex flex-wrap justify-center ">
