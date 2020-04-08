@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import Headroom from "react-headroom"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import ReactTooltip from "react-tooltip"
 const Header = ({ siteTitle }) => (
   <Headroom>
     <nav class="flex items-center justify-between flex-wrap bg-teal-700 p-6 font-sans font-bold">
@@ -12,21 +11,7 @@ const Header = ({ siteTitle }) => (
           <Link to="/" className="text-base md:text-2xl">
             {siteTitle}
           </Link>
-          <ReactTooltip
-            place="right"
-            type="dark"
-            effect="solid"
-            className="bg-red-500 shadow"
-          />
-          <a
-            className="text-base md:ml-2"
-            rel="noopener noreferrer"
-            target="_blank"
-            data-tip="Ver hashtag en instagram"
-            href="https://www.instagram.com/explore/tags/fueraarcioni/"
-          >
-            #fueraarcioni
-          </a>
+          <span className="text-base md:ml-4">#fueraarcioni</span>
         </div>
       </div>
 
