@@ -5,7 +5,7 @@ import Headroom from "react-headroom"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 const Header = ({ siteTitle }) => (
   <Headroom>
-    <nav class="flex items-center justify-between flex-wrap bg-teal-700 p-6 font-sans font-bold">
+    <nav class="flex items-center justify-between flex-wrap bg-red-700 p-6 font-sans font-bold shadow-md">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <div className="flex flex-col mr-12 font-mono md:flex-row">
           <Link to="/" className="text-base md:text-2xl">

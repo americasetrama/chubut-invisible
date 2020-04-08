@@ -52,7 +52,7 @@ const IndexPage = () => {
                   <a
                     href={item.data.link}
                     target="_blank"
-                    className="block mb-3 text-xl font-bold text-gray-900 hover:text-teal-500"
+                    className="block mb-3 text-xl font-bold text-gray-900 hover:text-red-500"
                     rel="noopener noreferrer"
                   >
                     {item.data.title}
@@ -60,7 +60,7 @@ const IndexPage = () => {
                   <div className="p-0 mb-2 ">
                     <Link
                       to={`/${kebabCase(item.data.category)}/`}
-                      className="inline-block px-3 py-1 mr-2 font-mono text-sm font-semibold text-gray-100 bg-teal-700 rounded-full hover:bg-gray-600"
+                      className="inline-block px-3 py-1 mr-2 font-mono text-sm font-semibold text-gray-100 bg-red-700 rounded-full hover:bg-gray-600"
                     >
                       {item.data.category}
                     </Link>

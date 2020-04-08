@@ -29,7 +29,7 @@ const routes = [
 ]
 
 const Navigation = ({ closeMenu }) => (
-  <nav className="justify-center hidden w-full py-2 font-mono bg-teal-100 border-b border-teal-400 shadow-sm app-nav lg:flex">
+  <nav className="justify-center hidden w-full py-2 font-mono bg-red-100 border-b border-red-400 shadow-sm app-nav lg:flex">
     {routes.map((route, i) => {
       return (
         <Link

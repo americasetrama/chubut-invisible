@@ -659,11 +659,11 @@ pre tt:after {
   bottom: 0;
   width: 54px;
   border-radius: 5px;
-  @apply bg-teal-400;
+  @apply bg-red-400;
 }
 
 body.dark .slider {
-  @apply bg-teal-400;
+  @apply bg-red-400;
 }
 
 .slider:before {
@@ -721,7 +721,7 @@ body.dark .post a {
 }
 
 body.dark header {
-  @apply bg-teal-900 !important;
+  @apply bg-red-900 !important;
 }
 
 body.dark .text-gray-600 {
