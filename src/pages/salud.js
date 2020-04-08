@@ -33,7 +33,7 @@ const SaludPage = () => {
       <h1 className="flex items-baseline justify-between py-6 text-3xl border-b border-gray-400">
         Salud{" "}
         <span className="text-sm ">
-          {data.allAirtable.totalCount} publicaciones
+          {data.allAirtable.totalCount} denuncias
         </span>
       </h1>
       <div className="max-w-full m-auto mb-6">

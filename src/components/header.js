@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
           <Link to="/" className="text-base md:text-2xl">
             {siteTitle}
           </Link>
-          <span className="text-base md:ml-4">#fueraarcioni</span>
+          <span className="text-base md:ml-4">#FueraArcioni</span>
         </div>
       </div>
 
