@@ -56,7 +56,7 @@ const ViolenciaInstitucionalPage = () => {
                   <a
                     href={item.data.link}
                     target="_blank"
-                    className="block mb-3 text-xl font-bold text-gray-900 hover:text-teal-500"
+                    className="block mb-3 text-xl font-bold text-gray-900 hover:text-red-500"
                     rel="noopener noreferrer"
                   >
                     {item.data.title}

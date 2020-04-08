@@ -34,9 +34,7 @@ const MegamineriaPage = () => {
       <SEO title="Megaminería" />
       <h1 className="flex items-baseline justify-between py-6 text-3xl border-b border-gray-400">
         Megaminería{" "}
-        <span className="text-sm">
-          {data.allAirtable.totalCount} denuncias
-        </span>
+        <span className="text-sm">{data.allAirtable.totalCount} denuncias</span>
       </h1>
       <div className="max-w-full m-auto mb-6">
         <div className="flex flex-wrap justify-center ">
@@ -52,7 +50,7 @@ const MegamineriaPage = () => {
                   <a
                     href={item.data.link}
                     target="_blank"
-                    className="block mb-3 text-xl font-bold text-gray-900 hover:text-teal-500"
+                    className="block mb-3 text-xl font-bold text-gray-900 hover:text-red-500"
                     rel="noopener noreferrer"
                   >
                     {item.data.title}
