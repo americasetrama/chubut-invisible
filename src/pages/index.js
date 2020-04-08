@@ -33,7 +33,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Inicio" />
       <h1 className="flex items-baseline justify-between py-6 text-3xl border-b border-gray-400">
-        Todas{" "}
+        Todos los hechos{" "}
         <span className="text-sm ">
           {data.allAirtable.totalCount} publicaciones
         </span>

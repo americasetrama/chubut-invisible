@@ -35,9 +35,9 @@ const Navigation = ({ closeMenu }) => (
         <Link
           key={i}
           onClick={closeMenu}
-          activeClassName="font-bold"
+          activeClassName="font-bold text-teal-800"
           to={route.slug}
-          className="px-2 m-2 text-sm"
+          className="px-2 m-2 text-sm font-bold"
         >
           {route.title}
         </Link>

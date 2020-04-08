@@ -5,6 +5,7 @@ html {
 }
 body {
   @apply bg-gray-100;
+  transition: all 0.2s;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

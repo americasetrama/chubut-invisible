@@ -11,6 +11,7 @@
     "gatsby-plugin-dark-mode": "^1.1.0",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-offline": "^3.1.2",
+    "react-tooltip": "^3.11.1",
     "gatsby-plugin-postcss": "^2.2.1",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-sharp": "^2.5.3",
