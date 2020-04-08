@@ -9,7 +9,7 @@ const SaludPage = () => {
     query SaludQuery {
       allAirtable(
         sort: { fields: data___date, order: DESC }
-        filter: { data: { category: { eq: "Salud" } } }
+        filter: { data: { published: { eq: true }, category: { eq: "Salud" } } }
       ) {
         nodes {
           data {
