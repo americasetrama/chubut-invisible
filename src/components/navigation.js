@@ -22,10 +22,6 @@ const routes = [
     title: "Violencia institucional",
     slug: "/violencia-institucional/",
   },
-  {
-    title: "Violencia contra las mujeres",
-    slug: "/violencia-contra-las-mujeres/",
-  },
 ]
 
 const Navigation = ({ closeMenu }) => (
@@ -35,9 +31,9 @@ const Navigation = ({ closeMenu }) => (
         <Link
           key={i}
           onClick={closeMenu}
-          activeClassName="font-bold text-teal-800"
+          activeClassName="font-bold text-red-600"
           to={route.slug}
-          className="px-2 m-2 text-sm font-bold"
+          className="px-2 m-2 text-sm font-bold leading-tight"
         >
           {route.title}
         </Link>
